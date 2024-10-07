@@ -1,0 +1,63 @@
+$primary-color: rgb(47, 47, 155);
+$secondary-police: Verdana, sans-serif;
+
+
+body {
+    background-color: rgb(228, 217, 191);
+    font-family: Arial, Helvetica, sans-serif;
+    h1 {
+        color: orange;
+    }
+    h2 {
+        color: $primary-color;
+        font-family: $secondary-police;
+        ~ p {
+            margin-top: 2em;
+            color: red;
+            &:hover {
+                color:green
+            }
+        }
+    }
+}
+
+@mixin forme($color) {
+    width: 50px;
+    height: 50px;
+    background-color: $color;
+    margin-bottom: 0.5em;
+}
+
+.carre {
+    @include forme(magenta);
+}
+
+.rond {
+    @include forme(#60bbc7);
+    border-radius: 50%;
+}
+
+@mixin flex($direction, $jc, $ai, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: $wrap;
+}
+
+.container-row {
+    @include flex(row, space-evenly, center, nowrap);
+}
+
+.container-column {
+    @include flex(column, space-evenly, center, nowrap);
+    height: 40vh;
+}
+
+@for $i from 1 through 4 {
+    .carre-dynamique#{$i * 5}{
+        width: $i * 5vh;
+        height: $i * 5vh;
+        background-color: cadetblue;
+    }
+}

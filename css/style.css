@@ -1,0 +1,76 @@
+body {
+  background-color: rgb(228, 217, 191);
+  font-family: Arial, Helvetica, sans-serif;
+}
+body h1 {
+  color: orange;
+}
+body h2 {
+  color: rgb(47, 47, 155);
+  font-family: Verdana, sans-serif;
+}
+body h2 ~ p {
+  margin-top: 2em;
+  color: red;
+}
+body h2 ~ p:hover {
+  color: green;
+}
+
+.carre {
+  width: 50px;
+  height: 50px;
+  background-color: magenta;
+  margin-bottom: 0.5em;
+}
+
+.rond {
+  width: 50px;
+  height: 50px;
+  background-color: #60bbc7;
+  margin-bottom: 0.5em;
+  border-radius: 50%;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.container-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 40vh;
+}
+
+.carre-dynamique5 {
+  width: 5vh;
+  height: 5vh;
+  background-color: cadetblue;
+}
+
+.carre-dynamique10 {
+  width: 10vh;
+  height: 10vh;
+  background-color: cadetblue;
+}
+
+.carre-dynamique15 {
+  width: 15vh;
+  height: 15vh;
+  background-color: cadetblue;
+}
+
+.carre-dynamique20 {
+  width: 20vh;
+  height: 20vh;
+  background-color: cadetblue;
+}
+
+/*# sourceMappingURL=style.css.map */
